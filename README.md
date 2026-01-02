@@ -5,7 +5,7 @@
 
 <p>I love working on AI, research tools, and real-world products.</p>
 
-<p>Currently building Plany.Space.</p>
+<p>Currently building[ Plany.Space](https://plany.space/) .</p>
 
 <p>My focus is simple: build useful tech, learn deeply, and grow fast.</p>
 
@@ -15,7 +15,7 @@
 
 <hr>
 
-<h2>About Plany.Space</h2>
+<h2>About [Plany.Space](https://plany.space/)</h2>
 
 <p>Plany.Space is a productivity platform designed to help people plan better and stay focused.</p>
 
