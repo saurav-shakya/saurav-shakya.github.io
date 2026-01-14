@@ -1,5 +1,5 @@
 
-<h1>Hi,  Saurav from this side 👋</h1>
+<h1>Hi,  Saurav from this side </h1>
 
 <p>I am a BTech Computer Science student, builder, and startup founder.</p>
 
