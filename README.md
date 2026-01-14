@@ -39,6 +39,13 @@ Plany.Space is being built with a long-term vision and real user feedback.
 
 ---
 
+## Books
+
+- Think and Grow Rich — Napoleon Hill
+- The Hard Thing About Hard Things — Ben Horowitz
+
+---
+
 ## Connect With Me
 
 - **Twitter**: [twitter.com/sauravv_x](https://twitter.com/sauravv_x)
