@@ -1,54 +1,52 @@
+# Hi, I'm Saurav 👋
 
-<h1>Hi,  Saurav from this side </h1>
+I am a **BTech Computer Science student**, builder, and startup founder.  
+I love working on **AI, research tools, and real-world products**.
 
-<p>I am a BTech Computer Science student, builder, and startup founder.</p>
+Currently building **[Plany.Space](https://plany.space/)** 🚀
 
-<p>I love working on AI, research tools, and real-world products.</p>
+My focus is simple:
+- Build useful tech  
+- Learn deeply  
+- Grow fast  
 
-<p>Currently building[ Plany.Space](https://plany.space/) .</p>
+I enjoy coding, experimenting with AI, and sharing what I learn.  
+If you are into startups, AI, or product building, we will get along well.
 
-<p>My focus is simple: build useful tech, learn deeply, and grow fast.</p>
+---
 
-<p>I enjoy coding, experimenting with AI, and sharing what I learn.</p>
+## About Plany.Space
 
-<p>If you are into startups, AI, or product building, we will get along well.</p>
+**[Plany.Space](https://plany.space/)** is a productivity platform designed to help people plan better and stay focused.
 
-<hr>
+It combines:
+- Planning  
+- Execution  
+- Clarity  
 
-<h2>About [Plany.Space](https://plany.space/)</h2>
+All in one simple system.
 
-<p>Plany.Space is a productivity platform designed to help people plan better and stay focused.</p>
+The goal is to reduce confusion and help users take consistent action.  
+Plany.Space is being built with a long-term vision and real user feedback.
 
-<p>It combines planning, execution, and clarity in one simple system.</p>
+---
 
-<p>The goal is to reduce confusion and help users take consistent action.</p>
+## What I’m Working On
 
-<p>I am building Plany.Space with a long-term vision and real user feedback.</p>
+- Building and scaling **Plany.Space**
+- Learning AI systems, backend, and scalable products
+- Improving user experience through continuous iteration
 
-<hr>
+---
 
-<h2>What I am working on</h2>
+## Connect With Me
 
-<p>• Building and scaling Plany.Space</p>
+- **Twitter**: [twitter.com/sauravv_x](https://twitter.com/sauravv_x)
+- **GitHub**: [github.com/saurav-shakya](https://github.com/saurav-shakya)
+- **LinkedIn**: [linkedin.com/in/saurav-shakya](https://www.linkedin.com/in/saurav-shakya)
+- **Email**: [sauravvpro@gmail.com](mailto:sauravvpro@gmail.com)
 
-<p>• Learning AI systems, backend, and scalable products</p>
+---
 
-<p>• Improving user experience through iteration</p>
-
-<hr>
-
-<h2>Connect with me</h2>
-
-<p>Twitter: <a href="https://twitter.com/sauravv_x" target="_blank">twitter.com/sauravv_x</a></p>
-
-<p>GitHub: <a href="https://github.com/saurav-shakya" target="_blank">github.com/saurav-shakya</a></p>
-
-<p>LinkedIn: <a href="https://www.linkedin.com/in/saurav-shakya" target="_blank">linkedin.com/in/saurav-shakya</a></p>
-
-<p>Email: <a href="mailto:Sauravvpro@gmail.com">sauravvpro@gmail.com</a></p>
-
-<hr>
-
-<p>No matter what you choose, build stuff and be around smart people. -Sam Altman</p>
-
-
+> No matter what you choose, build stuff and be around smart people.  
+> — Sam Altman
