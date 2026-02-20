@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What You Must Know Before AGI Arrives · Wiki</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1f2328;
+    background: #ffffff;
+  }
+
+  /* ── GitHub top nav bar ── */
+  .gh-topbar {
+    background: #24292f;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .gh-topbar svg { fill: #ffffff; flex-shrink: 0; }
+  .gh-topbar-search {
+    background: #3d444d;
+    border: 1px solid #444c56;
+    border-radius: 6px;
+    padding: 5px 12px;
+    color: #848d97;
+    font-size: 14px;
+    width: 280px;
+  }
+  .gh-topbar-links { display: flex; gap: 16px; margin-left: auto; }
+  .gh-topbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  .gh-topbar-links a:hover { opacity: 1; }
+
+  /* ── Repo header ── */
+  .repo-header {
+    background: #ffffff;
+    border-bottom: 1px solid #d0d7de;
+    padding: 16px 32px;
+  }
+  .repo-breadcrumb {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0969da;
+  }
+  .repo-breadcrumb span { color: #1f2328; font-weight: 600; }
+  .repo-breadcrumb a { color: #0969da; text-decoration: none; }
+  .repo-breadcrumb a:hover { text-decoration: underline; }
+
+  /* ── Repo nav tabs ── */
+  .repo-nav {
+    border-bottom: 1px solid #d0d7de;
+    background: #ffffff;
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+  }
+  .repo-nav a {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #57606a;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .repo-nav a:hover { color: #24292f; border-bottom-color: #d0d7de; }
+  .repo-nav a.active { color: #24292f; border-bottom-color: #fd8c73; }
+  .repo-nav .count {
+    background: #e6edf3;
+    border-radius: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #57606a;
+  }
+
+  /* ── Wiki layout ── */
+  .wiki-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 40px;
+  }
+
+  /* ── Wiki sidebar ── */
+  .wiki-sidebar { font-size: 14px; }
+  .wiki-sidebar h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2328;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d0d7de;
+  }
+  .wiki-sidebar ul { list-style: none; }
+  .wiki-sidebar ul li { padding: 4px 0; }
+  .wiki-sidebar ul li a {
+    color: #0969da;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .wiki-sidebar ul li a:hover { text-decoration: underline; }
+  .wiki-sidebar ul li a.current {
+    font-weight: 600;
+    color: #1f2328;
+  }
+  .sidebar-section { margin-bottom: 24px; }
+  .sidebar-meta { color: #57606a; font-size: 12px; margin-top: 4px; }
+
+  /* ── Wiki page header ── */
+  .wiki-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d0d7de;
+  }
+  .wiki-page-title { font-size: 28px; font-weight: 600; color: #1f2328; }
+  .wiki-edit-btn {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #24292f;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .wiki-edit-btn:hover { background: #eaeef2; }
+
+  /* ── Wiki content (GitHub Markdown) ── */
+  .markdown-body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1f2328;
+  }
+  .markdown-body h1 {
+    font-size: 2em;
+    font-weight: 600;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 0.3em;
+    margin: 24px 0 16px;
+  }
+  .markdown-body h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 0.3em;
+    margin: 24px 0 16px;
+  }
+  .markdown-body h3 { font-size: 1.25em; font-weight: 600; margin: 24px 0 16px; }
+  .markdown-body p { margin: 0 0 16px; }
+  .markdown-body strong { font-weight: 600; }
+  .markdown-body em { font-style: italic; }
+  .markdown-body hr {
+    height: 4px;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #d0d7de;
+    border: 0;
+  }
+  .markdown-body blockquote {
+    padding: 0 1em;
+    color: #57606a;
+    border-left: 4px solid #d0d7de;
+    margin: 0 0 16px;
+  }
+
+  /* Code blocks */
+  .markdown-body .code-block-wrap {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    margin: 0 0 16px;
+    overflow: hidden;
+  }
+  .code-block-header {
+    background: #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    color: #57606a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .code-lang-badge {
+    background: #ddf4ff;
+    border: 1px solid #54aeff66;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: #0969da;
+    font-weight: 600;
+  }
+  .code-copy-btn {
+    background: none;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: #57606a;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+  }
+  .code-copy-btn:hover { background: #eaeef2; }
+  .markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background: #f6f8fa;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    color: #1f2328;
+    margin: 0;
+    white-space: pre;
+  }
+
+  /* Mermaid diagram rendered */
+  .mermaid-rendered {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 24px 16px;
+    margin: 0 0 16px;
+    text-align: center;
+    overflow-x: auto;
+  }
+  .mermaid-rendered svg { max-width: 100%; height: auto; }
+
+  /* Table */
+  .markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 16px;
+    display: block;
+    overflow: auto;
+  }
+  .markdown-body table th,
+  .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+  }
+  .markdown-body table th {
+    background: #f6f8fa;
+    font-weight: 600;
+    text-align: left;
+  }
+  .markdown-body table tr:nth-child(even) td { background: #f6f8fa; }
+
+  /* ── Wiki footer ── */
+  .wiki-footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #d0d7de;
+    font-size: 12px;
+    color: #57606a;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .wiki-footer a { color: #0969da; text-decoration: none; }
+  .wiki-footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .wiki-layout { grid-template-columns: 1fr; }
+    .wiki-sidebar { order: -1; }
+    .repo-nav { overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- GitHub Top Nav -->
+<nav class="gh-topbar">
+  <svg height="32" viewBox="0 0 16 16" width="32" aria-hidden="true">
+    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
+  </svg>
+  <input class="gh-topbar-search" type="text" placeholder="Search or jump to...">
+  <div class="gh-topbar-links">
+    <a href="#">Pull requests</a>
+    <a href="#">Issues</a>
+    <a href="#">Marketplace</a>
+    <a href="#">Explore</a>
+  </div>
+</nav>
+
+<!-- Repo Header -->
+<div class="repo-header">
+  <div class="repo-breadcrumb">
+    <a href="#">sauravsingh</a> / <span>agi-thoughts</span>
+    <span style="font-size:14px;font-weight:400;background:#ddf4ff;border:1px solid #54aeff66;border-radius:20px;padding:2px 10px;margin-left:8px;color:#0969da;">Public</span>
+  </div>
+</div>
+
+<!-- Repo Nav -->
+<div class="repo-nav">
+  <a href="#">
+    <svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+    Code
+  </a>
+  <a href="#">Issues <span class="count">0</span></a>
+  <a href="#">Pull requests <span class="count">0</span></a>
+  <a href="#" class="active">
+    <svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Z"/></svg>
+    Wiki
+  </a>
+  <a href="#">Security</a>
+  <a href="#">Insights</a>
+</div>
+
+<!-- Wiki Layout -->
+<div class="wiki-layout">
+  <!-- Main Content -->
+  <main>
+    <div class="wiki-page-header">
+      <h1 class="wiki-page-title">What You Must Know Before AGI Arrives</h1>
+      <button class="wiki-edit-btn">✏️ Edit</button>
+    </div>
+
+    <article class="markdown-body">
+
+      <p><strong>By Saurav Singh</strong></p>
+      <hr>
+      <p>Hey everyone, Saurav Singh here. Today I want to talk about something that is on everyone's mind lately: <strong>AGI</strong>.</p>
+      <p>For those who might not know, AGI stands for <strong>Artificial General Intelligence</strong>. Unlike the AI we have today, which is really good at specific tasks like writing an email or generating a picture, AGI would be an AI that is as smart, or even smarter, than a human being at <em>almost everything</em>.</p>
+      <p>I think a lot of people are scared about what this means. But from how I see it, we don't need to panic. We just need to change how we prepare for the future. Here is what I think you absolutely must know before AGI fully arrives.</p>
+      <hr>
+
+      <h2>1. The Real Danger Isn't Losing Jobs; It's Losing Our Minds</h2>
+      <p>When people talk about AGI, they usually talk about robots taking over jobs. But I think there is a much bigger, hidden danger: <strong>we might lose our ability to think.</strong></p>
+      <p>Let me give you an example. Imagine you want to get physically fit, so you decide to run a mile every day. But instead of running, you get into your car and drive that mile. Sure, you completed the mile, and you did it much faster! But did you get any exercise? No. Your muscles will actually get weaker over time.</p>
+      <p>Using AI to do all your homework, write all your emails, or solve all your problems is exactly like driving that car. AGI will be a massive shortcut. But if we let it do all our heavy lifting, our brains will get lazy. To survive in an AGI world, we have to keep challenging ourselves with complex problems, just to keep our mental muscles strong.</p>
+
+      <!-- Mermaid code block shown -->
+      <div class="code-block-wrap">
+        <div class="code-block-header">
+          <span class="code-lang-badge">mermaid</span>
+          <button class="code-copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+        </div>
+        <pre>xychart-beta
+    title "Mental Strength Over Time"
+    x-axis ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"]
+    y-axis "Mental Strength" 0 --> 100
+    line [70, 75, 82, 88, 95]
+    line [70, 60, 45, 30, 18]</pre>
+      </div>
+      <!-- Rendered diagram -->
+      <div class="mermaid-rendered">
+        <div class="mermaid">
+xychart-beta
+    title "Mental Strength Over Time"
+    x-axis ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"]
+    y-axis "Mental Strength" 0 --> 100
+    line [70, 75, 82, 88, 95]
+    line [70, 60, 45, 30, 18]
+        </div>
+      </div>
+      <blockquote><p><strong>Blue:</strong> You keep challenging your brain. &nbsp;<strong>Orange:</strong> You let AI do all the thinking for you.</p></blockquote>
+
+      <hr>
+      <h2>2. We Need to Stop "Doing" and Start "Directing"</h2>
+      <p>For the longest time, the goal of education and work was to learn how to <em>do</em> the task. You learned how to write the essay, solve the math equation, or write the code.</p>
+      <p>When AGI arrives, it will do those base tasks perfectly. So, what is our role?</p>
+      <p>I think our role shifts from being the <strong>"calculator"</strong> to being the <strong>"director."</strong> Instead of just doing the homework, we need to learn how to <em>grade</em> the homework. We need the ability to look at what the AGI produces, understand it, check it for errors, and synthesize those ideas into something entirely new.</p>
+      <p>Here is a simple way I like to look at it:</p>
+
+      <table>
+        <thead><tr><th>The Old Way (Pre-AGI)</th><th>The New Way (AGI Era)</th></tr></thead>
+        <tbody>
+          <tr><td>Memorizing facts</td><td>Connecting different ideas together</td></tr>
+          <tr><td>Writing the first draft</td><td>Editing and refining the AI's draft</td></tr>
+          <tr><td>Trying to be the smartest</td><td>Trying to be the most creative</td></tr>
+          <tr><td>Following instructions</td><td>Giving the best instructions</td></tr>
+        </tbody>
+      </table>
+
+      <p>The shift looks like this:</p>
+      <div class="code-block-wrap">
+        <div class="code-block-header">
+          <span class="code-lang-badge">mermaid</span>
+          <button class="code-copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+        </div>
+        <pre>flowchart LR
+    A["You Pre-AGI\nDo the task yourself"] -->|AGI arrives| B["AGI\nDoes the base task"]
+    B --> C["You in AGI Era\nDirect, Grade and Refine"]
+    C --> D["New Value\nCreativity and Synthesis"]</pre>
+      </div>
+      <div class="mermaid-rendered">
+        <div class="mermaid">
+flowchart LR
+    A["🧠 You Pre-AGI\nDo the task yourself"] -->|AGI arrives| B["🤖 AGI\nDoes the base task"]
+    B --> C["🎯 You in AGI Era\nDirect, Grade and Refine"]
+    C --> D["💡 New Value\nCreativity and Synthesis"]
+    style A fill:#ddf4ff,stroke:#54aeff,color:#0550ae
+    style B fill:#ffebe9,stroke:#ff8182,color:#a40000
+    style C fill:#dafbe1,stroke:#56d364,color:#116329
+    style D fill:#fff8c5,stroke:#f0a500,color:#7d4e00
+        </div>
+      </div>
+
+      <hr>
+      <h2>3. Human Connection is Your Superpower</h2>
+      <p>If AGI has a perfect IQ (Intelligence Quotient), then what makes us special? I think the answer is <strong>EQ (Emotional Quotient).</strong></p>
+      <p>We are humans, and we will always crave human connection. Think about music. We have perfect studio recordings of songs that have been auto-tuned to sound flawless. Yet, people still pay hundreds of dollars to go to live concerts. Why? Because we want the live, raw, human experience. We want to see someone sweating, smiling, and connecting with the crowd.</p>
+
+      <div class="code-block-wrap">
+        <div class="code-block-header">
+          <span class="code-lang-badge">mermaid</span>
+          <button class="code-copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+        </div>
+        <pre>pie title Value in the Future
+    "Human Empathy, Communication and EQ" : 70
+    "Raw Technical Skill" : 30</pre>
+      </div>
+      <div class="mermaid-rendered">
+        <div class="mermaid">
+pie title "Value in the Future"
+    "Human Empathy, Communication and EQ" : 70
+    "Raw Technical Skill" : 30
+        </div>
+      </div>
+
+      <p>In the future, the most valuable people will be the ones who can look someone in the eye, understand their feelings, and read the room. Jobs that require deep empathy, acting, teaching with passion, and motivating others will be incredibly hard for AGI to replace.</p>
+
+      <hr>
+      <h2>4. You Must Actually Care About Helping People</h2>
+      <p>In the past, you could be very successful just by being a solitary genius. You could sit in a room, solve a problem faster than anyone else, and make a lot of money.</p>
+      <p>I think AGI will eventually be the "solitary genius" in the room. So to succeed, you need something AGI doesn't have: a genuine desire to delight and help other people.</p>
+
+      <div class="code-block-wrap">
+        <div class="code-block-header">
+          <span class="code-lang-badge">mermaid</span>
+          <button class="code-copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+        </div>
+        <pre>quadrantChart
+    title What AGI Has vs What You Have
+    x-axis Low Intelligence --> High Intelligence
+    y-axis Low Empathy --> High Empathy
+    quadrant-1 Your Sweet Spot
+    quadrant-2 Empathetic but Limited
+    quadrant-3 Neither
+    quadrant-4 AGI Territory
+    AGI: [0.95, 0.10]
+    You Today: [0.55, 0.75]
+    You in AGI Era: [0.65, 0.92]</pre>
+      </div>
+      <div class="mermaid-rendered">
+        <div class="mermaid">
+quadrantChart
+    title "What AGI Has vs What You Have"
+    x-axis "Low Intelligence" --> "High Intelligence"
+    y-axis "Low Empathy" --> "High Empathy"
+    quadrant-1 Your Sweet Spot
+    quadrant-2 Empathetic but Limited
+    quadrant-3 Neither
+    quadrant-4 AGI Territory
+    AGI: [0.95, 0.10]
+    You Today: [0.55, 0.75]
+    You in AGI Era: [0.65, 0.92]
+        </div>
+      </div>
+
+      <p>You need to learn how to put yourself in someone else's shoes. If you can understand the world from different viewpoints, what a frustrated customer feels, what a confused student feels, or what a tired parent feels, you can create real solutions for them. AGI is a machine; it doesn't <em>feel</em>. Your empathy is your compass.</p>
+
+      <hr>
+      <h2>Final Thoughts</h2>
+      <p>I think the arrival of AGI is going to be the biggest shift in human history. But we don't have to be replaced by it. We just have to stop trying to compete with machines on their level.</p>
+
+      <div class="code-block-wrap">
+        <div class="code-block-header">
+          <span class="code-lang-badge">mermaid</span>
+          <button class="code-copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+        </div>
+        <pre>mindmap
+  root((AGI Era Survival))
+    Mental Fitness
+      Keep challenging your brain
+      Avoid over-relying on shortcuts
+    Directing Skills
+      Grade and refine AI output
+      Give better instructions
+    Human EQ
+      Empathy and connection
+      Read the room
+    Genuine Care
+      Understand others viewpoints
+      Create real solutions</pre>
+      </div>
+      <div class="mermaid-rendered">
+        <div class="mermaid">
+mindmap
+  root((AGI Era Survival))
+    Mental Fitness
+      Keep challenging your brain
+      Avoid over-relying on shortcuts
+    Directing Skills
+      Grade and refine AI output
+      Give better instructions
+    Human EQ
+      Empathy and connection
+      Read the room
+    Genuine Care
+      Understand others viewpoints
+      Create real solutions
+        </div>
+      </div>
+
+      <p>Let AGI have the raw processing power. We need to claim the human stuff: creativity, mental fitness, empathy, and genuine connection.</p>
+      <p><em>What do you think about AGI? Let me know in the comments below!</em></p>
+      <p><strong>Saurav Singh</strong></p>
+
+      <div class="wiki-footer">
+        <span>Last edited by <a href="#">sauravsingh</a> · just now</span>
+        <a href="#">← Previous</a>
+        <a href="#">Edit this page</a>
+        <a href="#">Page history</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="wiki-sidebar">
+    <div class="sidebar-section">
+      <h3>Pages <span style="float:right;font-weight:400;color:#57606a;">3</span></h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="current">What You Must Know Before AGI Arrives</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <h3>Clone this wiki</h3>
+      <div style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:8px 10px;font-family:monospace;font-size:12px;color:#57606a;word-break:break-all;">
+        https://github.com/sauravsingh/agi-thoughts.wiki.git
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <h3>Contributors</h3>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#0969da,#54aeff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:600;">S</div>
+      </div>
+      <div class="sidebar-meta">1 contributor</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    securityLevel: 'loose',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    fontSize: 14,
+    flowchart: { curve: 'basis', padding: 20 },
+    pie: { textPosition: 0.75 }
+  });
+</script>
+</body>
+</html>
