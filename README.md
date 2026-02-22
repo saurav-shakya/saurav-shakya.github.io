@@ -49,7 +49,7 @@ I write about AI, startups,personal, thinking frameworks, and lessons from build
 
 ---
 
-## Books
+## Books 📚 
 
 - Think and Grow Rich — Napoleon Hill  
 - The Hard Thing About Hard Things — Ben Horowitz  
