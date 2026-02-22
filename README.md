@@ -33,7 +33,7 @@ Plany.Space is being built with a long-term vision and real user feedback.
 
 ---
 
-## What I’m Working On
+## What I'm Working On
 
 - Building and scaling **Plany.Space**  
 - Learning AI systems, backend, and scalable products  
@@ -47,7 +47,6 @@ I write about AI, startups,personal, thinking frameworks, and lessons from build
 
 ### 1. [What You Must Know Before AGI Arrives](https://real-bead-3ea.notion.site/What-you-must-know-before-AGI-arrives-30de38c0bdaf80d6b02aec0c40a1ed31?pvs=143)  - 21/02/2026
 
-
 ---
 
 ## Books
@@ -59,10 +58,11 @@ I write about AI, startups,personal, thinking frameworks, and lessons from build
 
 ## Connect With Me
 
-- **Twitter**: https://twitter.com/sauravv_x  
-- **GitHub**: https://github.com/saurav-shakya  
-- **LinkedIn**: https://www.linkedin.com/in/saurav-shakya  
-- **Email**: sauravvpro@gmail.com  
+- **Twitter**: [https://twitter.com/sauravv_x](https://twitter.com/sauravv_x)
+- **GitHub**: [https://github.com/saurav-shakya](https://github.com/saurav-shakya)
+- **LinkedIn**: [https://www.linkedin.com/in/saurav-shakya](https://www.linkedin.com/in/saurav-shakya)
+- **Instagram**: [https://www.instagram.com/saurav.singh75/](https://www.instagram.com/saurav.singh75/)
+- **Email**: sauravvpro@gmail.com
 
 ---
 
