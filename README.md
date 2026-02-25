@@ -32,7 +32,8 @@ Still learning, still building, still figuring things out :)
 - **Languages**: Python, JavaScript, TypeScript  
 - **Web**: HTML, CSS, Node.js, Express.js  
 - **Tools**: Git, GitHub, Docker, AWS  
-- for my more projects visit **GitHub**: https://github.com/saurav-shakya  
+- More projects: 👉 **[github.com/saurav-shakya](https://github.com/saurav-shakya)**  
+
 ---
 
 ## Projects 
@@ -89,11 +90,11 @@ I write about AI, startups, personal, thinking frameworks, and lessons from buil
 
 ## Connect With Me
 
-- **Twitter**: https://twitter.com/sauravv_x  
-- **GitHub**: https://github.com/saurav-shakya  
-- **LinkedIn**: https://www.linkedin.com/in/saurav-shakya  
-- **Instagram**: https://www.instagram.com/saurav.singh75/  
-- **Email**: sauravvpro@gmail.com  
+- **Twitter**: [twitter.com/sauravv_x](https://twitter.com/sauravv_x)  
+- **GitHub**: [github.com/saurav-shakya](https://github.com/saurav-shakya)  
+- **LinkedIn**: [linkedin.com/in/saurav-shakya](https://www.linkedin.com/in/saurav-shakya)  
+- **Instagram**: [instagram.com/saurav.singh75](https://www.instagram.com/saurav.singh75/)  
+- **Email**: [sauravvpro@gmail.com](mailto:sauravvpro@gmail.com)  
 
 ---
 
