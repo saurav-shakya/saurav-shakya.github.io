@@ -16,7 +16,26 @@ If you are into startups, AI, or product building, we will get along well.
 
 ---
 
-## About Plany.Space
+## About Me
+
+I am focused on building and scaling real products.
+
+- **Plany.Space** selected for **AWS Activate for Startups**  
+- **NeoynAI** selected for **Microsoft for Startups**  
+
+Still learning, still building, still figuring things out :)
+
+---
+
+## Technical Skills
+
+- **Languages**: Python, JavaScript, TypeScript  
+- **Web**: HTML, CSS, Node.js, Express.js  
+- **Tools**: Git, GitHub, Docker, AWS  
+- for my more projects visit **GitHub**: https://github.com/saurav-shakya  
+---
+
+## Projects 
 
 **[Plany.Space](https://plany.space/)** is a productivity platform designed to help people plan better and stay focused.
 
@@ -33,23 +52,35 @@ Plany.Space is being built with a long-term vision and real user feedback.
 
 ---
 
+**[NeoynAI](https://neoynai.com/)** is an AI-powered research and productivity platform focused on helping users analyze information, generate insights, and make better decisions faster.
+
+It focuses on:
+
+- AI-driven research  
+- Smart analysis  
+- Knowledge automation  
+
+The goal of NeoynAI is to simplify complex information and turn it into clear, actionable intelligence for creators, students, and founders.
+
+---
+
 ## What I'm Working On
 
 - Building and scaling **Plany.Space**  
-- Learning AI systems, backend, and scalable products  
-- Improving user experience through continuous iteration  
+- Developing and improving **NeoynAI**  
+- Learning AI systems and scalable products  
 
 ---
 
 ## Blog
 
-I write about AI, startups,personal, thinking frameworks, and lessons from building real products.
+I write about AI, startups, personal, thinking frameworks, and lessons from building real products.
 
 ### 1. [What You Must Know Before AGI Arrives](https://real-bead-3ea.notion.site/What-you-must-know-before-AGI-arrives-30de38c0bdaf80d6b02aec0c40a1ed31?pvs=143)  - 21/02/2026
 
 ---
 
-## Books 📚 
+## Books I’m Reading 📚 
 
 - Think and Grow Rich — Napoleon Hill  
 - The Hard Thing About Hard Things — Ben Horowitz  
@@ -58,13 +89,13 @@ I write about AI, startups,personal, thinking frameworks, and lessons from build
 
 ## Connect With Me
 
-- **Twitter**: [https://twitter.com/sauravv_x](https://twitter.com/sauravv_x)
-- **GitHub**: [https://github.com/saurav-shakya](https://github.com/saurav-shakya)
-- **LinkedIn**: [https://www.linkedin.com/in/saurav-shakya](https://www.linkedin.com/in/saurav-shakya)
-- **Instagram**: [https://www.instagram.com/saurav.singh75/](https://www.instagram.com/saurav.singh75/)
-- **Email**: sauravvpro@gmail.com
+- **Twitter**: https://twitter.com/sauravv_x  
+- **GitHub**: https://github.com/saurav-shakya  
+- **LinkedIn**: https://www.linkedin.com/in/saurav-shakya  
+- **Instagram**: https://www.instagram.com/saurav.singh75/  
+- **Email**: sauravvpro@gmail.com  
 
 ---
 
-> No matter what you choose, build stuff and be around smart people.  
+> No topic is too big if you build step by step.  
 > — Sam Altman
