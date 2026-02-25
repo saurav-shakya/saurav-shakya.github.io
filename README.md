@@ -37,7 +37,7 @@ Still learning, still building, still figuring things out :)
 
 ## Projects 
 
-**[Plany.Space](https://plany.space/)** is a productivity platform designed to help people plan better and stay focused.
+**[Plany.Space](https://plany.space/)** is a productivity app designed to help people plan better and stay focused.
 
 It combines:
 
@@ -97,5 +97,5 @@ I write about AI, startups, personal, thinking frameworks, and lessons from buil
 
 ---
 
-> No topic is too big if you build step by step.  
+> No matter what you choose, build stuff and be around smart people.  
 > — Sam Altman
