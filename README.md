@@ -77,7 +77,7 @@ The goal of NeoynAI is to simplify complex information and turn it into clear, a
 
 I write about AI, startups, personal thoughts, thinking frameworks, and lessons from building real products.
 
-### 1. [What You Must Know Before AGI Arrives](https://real-bead-3ea.notion.site/What-you-must-know-before-AGI-arrives-30de38c0bdaf80d6b02aec0c40a1ed31?pvs=143) - 21/02/2026
+### 1. [What You Must Know Before AGI Arrives](https://heysaurav.notion.site/What-you-must-know-before-AGI-arrives-30de38c0bdaf80d6b02aec0c40a1ed31) - 21/02/2026
 
 ### 2. [The Man Who Could Explain the Universe Over a Cup of Tea](https://x.com/sauravv_x/status/2031812568940232920) - 12/03/2026
 
