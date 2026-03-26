@@ -79,7 +79,9 @@ I write about AI, startups, personal thoughts, thinking frameworks, and lessons 
 
 ### 1. [What You Must Know Before AGI Arrives](https://heysaurav.notion.site/What-you-must-know-before-AGI-arrives-30de38c0bdaf80d6b02aec0c40a1ed31) - 21/02/2026
 
-### 2. [The Man Who Could Explain the Universe Over a Cup of Tea](https://x.com/sauravv_x/status/2031812568940232920) - 12/03/2026
+### 2. [You Changed for Them. They Still Left](https://heysaurav.notion.site/You-Changed-for-Them-They-Still-Left-32fe38c0bdaf80209e6bdc71c0f96753) - 27/02/2026
+
+### 3. [The Man Who Could Explain the Universe Over a Cup of Tea](https://x.com/sauravv_x/status/2031812568940232920) - 12/03/2026
 
 ---
 
