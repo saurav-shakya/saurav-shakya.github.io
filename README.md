@@ -83,6 +83,8 @@ I write about AI, startups, personal thoughts, thinking frameworks, and lessons 
 
 ### 3. [The Man Who Could Explain the Universe Over a Cup of Tea](https://x.com/sauravv_x/status/2031812568940232920) - 12/03/2026
 
+### 4. [I will not give up](https://heysaurav.notion.site/I-will-not-give-up-362e38c0bdaf80f798dccf758f962385) - 16/05/2026
+
 ---
 
 
@@ -99,7 +101,7 @@ I write about AI, startups, personal thoughts, thinking frameworks, and lessons 
 - **GitHub**: [github.com/saurav-shakya](https://github.com/saurav-shakya)  
 - **LinkedIn**: [linkedin.com/in/saurav-shakya](https://www.linkedin.com/in/saurav-shakya)  
 - **Instagram**: [instagram.com/saurav.singh75](https://www.instagram.com/saurav.singh75/)  
-- **Email**: [sauravvpro@gmail.com](mailto:sauravvpro@gmail.com)  
+- **Email**: [hi@sauravv.me](mailto:hi@sauravv.me)  
 
 ---
 
