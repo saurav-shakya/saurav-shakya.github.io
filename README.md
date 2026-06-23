@@ -85,6 +85,7 @@ I write about AI, startups, personal thoughts, thinking frameworks, and lessons 
 
 ### 4. [I will not give up](https://heysaurav.notion.site/I-will-not-give-up-362e38c0bdaf80f798dccf758f962385) - 16/05/2026
 
+### 5. [The /Goal Theory of Reality: Are Humans Running on Hidden Parameters?](https://x.com/i/status/2069483557521887413) - 23/06/2026
 ---
 
 
