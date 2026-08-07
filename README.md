@@ -5,7 +5,7 @@ I'm a **BTech Computer Science student** who'd rather ship than sit still, a bui
 Right now, most of my time goes into **[Plany.Space](https://plany.space/)** 
 
 A few things I care about:
-- Building things that are genuinely useful
+- Building things that are genuinely useful.
 - Learning deeply, not just fast
 - Moving quickly without cutting corners
 
