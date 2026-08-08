@@ -8,17 +8,54 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --bg: #ffffff;
+    --text: #1f2328;
+    --muted: #57606a;
+    --border: #d0d7de;
+    --surface: #f6f8fa;
+    --surface-2: #e6edf3;
+    --link: #0969da;
+    --topbar-bg: #24292f;
+    --topbar-search-bg: #3d444d;
+    --topbar-search-border: #444c56;
+    --topbar-search-text: #848d97;
+    --topbar-link: #ffffff;
+    --badge-bg: #ddf4ff;
+    --badge-border: #54aeff66;
+    --badge-text: #0969da;
+    --mermaid-surface: #ffffff;
+  }
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #1f2328;
-    background: #ffffff;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  body[data-theme="dark"] {
+    --bg: #0d1117;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --border: #30363d;
+    --surface: #161b22;
+    --surface-2: #21262d;
+    --link: #58a6ff;
+    --topbar-bg: #161b22;
+    --topbar-search-bg: #0d1117;
+    --topbar-search-border: #30363d;
+    --topbar-search-text: #8b949e;
+    --topbar-link: #c9d1d9;
+    --badge-bg: #1f6feb33;
+    --badge-border: #58a6ff66;
+    --badge-text: #58a6ff;
   }
 
   /* ── GitHub top nav bar ── */
   .gh-topbar {
-    background: #24292f;
+    background: var(--topbar-bg);
     padding: 12px 16px;
     display: flex;
     align-items: center;
@@ -27,19 +64,30 @@
     top: 0;
     z-index: 100;
   }
-  .gh-topbar svg { fill: #ffffff; flex-shrink: 0; }
+  .gh-topbar svg { fill: var(--topbar-link); flex-shrink: 0; }
   .gh-topbar-search {
-    background: #3d444d;
-    border: 1px solid #444c56;
+    background: var(--topbar-search-bg);
+    border: 1px solid var(--topbar-search-border);
     border-radius: 6px;
     padding: 5px 12px;
-    color: #848d97;
+    color: var(--topbar-search-text);
     font-size: 14px;
     width: 280px;
   }
+  .theme-toggle {
+    background: transparent;
+    border: 1px solid var(--topbar-search-border);
+    color: var(--topbar-link);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .theme-toggle:hover { opacity: 0.9; }
   .gh-topbar-links { display: flex; gap: 16px; margin-left: auto; }
   .gh-topbar-links a {
-    color: #ffffff;
+    color: var(--topbar-link);
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -49,23 +97,33 @@
 
   /* ── Repo header ── */
   .repo-header {
-    background: #ffffff;
-    border-bottom: 1px solid #d0d7de;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     padding: 16px 32px;
   }
   .repo-breadcrumb {
     font-size: 20px;
     font-weight: 400;
-    color: #0969da;
+    color: var(--link);
   }
-  .repo-breadcrumb span { color: #1f2328; font-weight: 600; }
-  .repo-breadcrumb a { color: #0969da; text-decoration: none; }
+  .repo-breadcrumb span { color: var(--text); font-weight: 600; }
+  .repo-breadcrumb a { color: var(--link); text-decoration: none; }
   .repo-breadcrumb a:hover { text-decoration: underline; }
+  .public-badge {
+    font-size:14px;
+    font-weight:400;
+    background:var(--badge-bg);
+    border:1px solid var(--badge-border);
+    border-radius:20px;
+    padding:2px 10px;
+    margin-left:8px;
+    color:var(--badge-text);
+  }
 
   /* ── Repo nav tabs ── */
   .repo-nav {
-    border-bottom: 1px solid #d0d7de;
-    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     padding: 0 32px;
     display: flex;
     gap: 0;
@@ -74,22 +132,22 @@
     padding: 10px 16px;
     font-size: 14px;
     font-weight: 600;
-    color: #57606a;
+    color: var(--muted);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     display: flex;
     align-items: center;
     gap: 6px;
   }
-  .repo-nav a:hover { color: #24292f; border-bottom-color: #d0d7de; }
-  .repo-nav a.active { color: #24292f; border-bottom-color: #fd8c73; }
+  .repo-nav a:hover { color: var(--text); border-bottom-color: var(--border); }
+  .repo-nav a.active { color: var(--text); border-bottom-color: #fd8c73; }
   .repo-nav .count {
-    background: #e6edf3;
+    background: var(--surface-2);
     border-radius: 20px;
     padding: 0 6px;
     font-size: 12px;
     font-weight: 600;
-    color: #57606a;
+    color: var(--muted);
   }
 
   /* ── Wiki layout ── */
@@ -107,25 +165,48 @@
   .wiki-sidebar h3 {
     font-size: 14px;
     font-weight: 600;
-    color: #1f2328;
+    color: var(--text);
     margin-bottom: 8px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #d0d7de;
+    border-bottom: 1px solid var(--border);
   }
   .wiki-sidebar ul { list-style: none; }
   .wiki-sidebar ul li { padding: 4px 0; }
   .wiki-sidebar ul li a {
-    color: #0969da;
+    color: var(--link);
     text-decoration: none;
     font-size: 13px;
   }
   .wiki-sidebar ul li a:hover { text-decoration: underline; }
   .wiki-sidebar ul li a.current {
     font-weight: 600;
-    color: #1f2328;
+    color: var(--text);
   }
   .sidebar-section { margin-bottom: 24px; }
-  .sidebar-meta { color: #57606a; font-size: 12px; margin-top: 4px; }
+  .sidebar-meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .sidebar-count { float:right;font-weight:400;color:var(--muted); }
+  .clone-box {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:8px 10px;
+    font-family:monospace;
+    font-size:12px;
+    color:var(--muted);
+    word-break:break-all;
+  }
+  .contributor-avatar {
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0969da,#54aeff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+  }
 
   /* ── Wiki page header ── */
   .wiki-page-header {
@@ -134,39 +215,39 @@
     justify-content: space-between;
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #d0d7de;
+    border-bottom: 1px solid var(--border);
   }
-  .wiki-page-title { font-size: 28px; font-weight: 600; color: #1f2328; }
+  .wiki-page-title { font-size: 28px; font-weight: 600; color: var(--text); }
   .wiki-edit-btn {
-    background: #f6f8fa;
-    border: 1px solid #d0d7de;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 6px;
     padding: 5px 16px;
     font-size: 14px;
     font-weight: 600;
-    color: #24292f;
+    color: var(--text);
     text-decoration: none;
     cursor: pointer;
   }
-  .wiki-edit-btn:hover { background: #eaeef2; }
+  .wiki-edit-btn:hover { background: var(--surface-2); }
 
   /* ── Wiki content (GitHub Markdown) ── */
   .markdown-body {
     font-size: 16px;
     line-height: 1.6;
-    color: #1f2328;
+    color: var(--text);
   }
   .markdown-body h1 {
     font-size: 2em;
     font-weight: 600;
-    border-bottom: 1px solid #d0d7de;
+    border-bottom: 1px solid var(--border);
     padding-bottom: 0.3em;
     margin: 24px 0 16px;
   }
   .markdown-body h2 {
     font-size: 1.5em;
     font-weight: 600;
-    border-bottom: 1px solid #d0d7de;
+    border-bottom: 1px solid var(--border);
     padding-bottom: 0.3em;
     margin: 24px 0 16px;
   }
@@ -178,71 +259,71 @@
     height: 4px;
     padding: 0;
     margin: 24px 0;
-    background-color: #d0d7de;
+    background-color: var(--border);
     border: 0;
   }
   .markdown-body blockquote {
     padding: 0 1em;
-    color: #57606a;
-    border-left: 4px solid #d0d7de;
+    color: var(--muted);
+    border-left: 4px solid var(--border);
     margin: 0 0 16px;
   }
 
   /* Code blocks */
   .markdown-body .code-block-wrap {
-    background: #f6f8fa;
-    border: 1px solid #d0d7de;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 6px;
     margin: 0 0 16px;
     overflow: hidden;
   }
   .code-block-header {
-    background: #f6f8fa;
-    border-bottom: 1px solid #d0d7de;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
     padding: 8px 16px;
     font-size: 12px;
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    color: #57606a;
+    color: var(--muted);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .code-lang-badge {
-    background: #ddf4ff;
-    border: 1px solid #54aeff66;
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
     border-radius: 20px;
     padding: 2px 8px;
     font-size: 11px;
-    color: #0969da;
+    color: var(--badge-text);
     font-weight: 600;
   }
   .code-copy-btn {
     background: none;
-    border: 1px solid #d0d7de;
+    border: 1px solid var(--border);
     border-radius: 4px;
     padding: 3px 8px;
     font-size: 11px;
-    color: #57606a;
+    color: var(--muted);
     cursor: pointer;
     font-family: -apple-system, sans-serif;
   }
-  .code-copy-btn:hover { background: #eaeef2; }
+  .code-copy-btn:hover { background: var(--surface-2); }
   .markdown-body pre {
     padding: 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background: #f6f8fa;
+    background: var(--surface);
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    color: #1f2328;
+    color: var(--text);
     margin: 0;
     white-space: pre;
   }
 
   /* Mermaid diagram rendered */
   .mermaid-rendered {
-    background: #ffffff;
-    border: 1px solid #d0d7de;
+    background: var(--mermaid-surface);
+    border: 1px solid var(--border);
     border-radius: 6px;
     padding: 24px 16px;
     margin: 0 0 16px;
@@ -262,27 +343,27 @@
   .markdown-body table th,
   .markdown-body table td {
     padding: 6px 13px;
-    border: 1px solid #d0d7de;
+    border: 1px solid var(--border);
   }
   .markdown-body table th {
-    background: #f6f8fa;
+    background: var(--surface);
     font-weight: 600;
     text-align: left;
   }
-  .markdown-body table tr:nth-child(even) td { background: #f6f8fa; }
+  .markdown-body table tr:nth-child(even) td { background: var(--surface); }
 
   /* ── Wiki footer ── */
   .wiki-footer {
     margin-top: 32px;
     padding-top: 16px;
-    border-top: 1px solid #d0d7de;
+    border-top: 1px solid var(--border);
     font-size: 12px;
-    color: #57606a;
+    color: var(--muted);
     display: flex;
     gap: 24px;
     align-items: center;
   }
-  .wiki-footer a { color: #0969da; text-decoration: none; }
+  .wiki-footer a { color: var(--link); text-decoration: none; }
   .wiki-footer a:hover { text-decoration: underline; }
 
   @media (max-width: 768px) {
@@ -300,6 +381,7 @@
     <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
   </svg>
   <input class="gh-topbar-search" type="text" placeholder="Search or jump to...">
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
   <div class="gh-topbar-links">
     <a href="#">Pull requests</a>
     <a href="#">Issues</a>
@@ -312,7 +394,7 @@
 <div class="repo-header">
   <div class="repo-breadcrumb">
     <a href="#">sauravsingh</a> / <span>agi-thoughts</span>
-    <span style="font-size:14px;font-weight:400;background:#ddf4ff;border:1px solid #54aeff66;border-radius:20px;padding:2px 10px;margin-left:8px;color:#0969da;">Public</span>
+    <span class="public-badge">Public</span>
   </div>
 </div>
 
@@ -545,7 +627,7 @@ mindmap
   <!-- Sidebar -->
   <aside class="wiki-sidebar">
     <div class="sidebar-section">
-      <h3>Pages <span style="float:right;font-weight:400;color:#57606a;">3</span></h3>
+      <h3>Pages <span class="sidebar-count">3</span></h3>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#" class="current">What You Must Know Before AGI Arrives</a></li>
@@ -554,14 +636,14 @@ mindmap
     </div>
     <div class="sidebar-section">
       <h3>Clone this wiki</h3>
-      <div style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:8px 10px;font-family:monospace;font-size:12px;color:#57606a;word-break:break-all;">
+      <div class="clone-box">
         https://github.com/sauravsingh/agi-thoughts.wiki.git
       </div>
     </div>
     <div class="sidebar-section">
       <h3>Contributors</h3>
       <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#0969da,#54aeff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:600;">S</div>
+        <div class="contributor-avatar">S</div>
       </div>
       <div class="sidebar-meta">1 contributor</div>
     </div>
@@ -569,6 +651,32 @@ mindmap
 </div>
 
 <script>
+  const THEME_STORAGE_KEY = 'site-theme';
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  function getPreferredTheme() {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function setTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    if (themeToggleBtn) {
+      themeToggleBtn.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+  }
+
+  setTheme(getPreferredTheme());
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      setTheme(nextTheme);
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    });
+  }
+
   mermaid.initialize({
     startOnLoad: true,
     theme: 'default',
