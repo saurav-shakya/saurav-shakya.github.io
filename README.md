@@ -85,6 +85,7 @@ I write about AI, startups, personal thoughts, thinking frameworks, and lessons 
 3. [The Man Who Could Explain the Universe Over a Cup of Tea](https://x.com/sauravv_x/status/2031812568940232920), 12/03/2026
 4. [I will not give up](https://heysaurav.notion.site/I-will-not-give-up-362e38c0bdaf80f798dccf758f962385), 16/05/2026
 5. [The /Goal Theory of Reality: Are Humans Running on Hidden Parameters?](https://x.com/i/status/2069483557521887413), 23/06/2026
+6. [We All Left Home](https://sauravvx.substack.com/p/we-all-left-home), 27/09/2026
 
 More here **[x.com/sauravv_x/articles](https://x.com/sauravv_x/articles)**
 
