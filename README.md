@@ -1,4 +1,4 @@
-# Hi, I'm Saurav <img src="https://github.com/user-attachments/assets/2a0a1457-1937-418e-a9f4-5ad580b8d5df" alt="Saurav profile photo" width="56" />
+# Hi, I'm Saurav <img src="https://github.com/user-attachments/assets/2a0a1457-1937-418e-a9f4-5ad580b8d5df" alt="Saurav profile photo" width="160" />
 
 I'm a **BTech Computer Science student** who'd rather ship than sit still, a builder and startup founder at heart, with a soft spot for **AI, research tools, and products people actually use**.
 
